@@ -1,0 +1,14 @@
+trackUnique{
+public static List trackUnique(ArrayList<Integer> ls){
+		Map<Integer,Count> occurences=countOccurences(ls);
+		HashSet <Integer>lsRef= new HashSet<>(ls);
+		List <Integer> resultList= new ArrayList<>();
+		for(Integer i:lsRef){
+			if(occurences.get(i).getCount()==1){
+				resultList.add(i);
+			}
+			
+		}
+		return resultList;
+	}
+}
